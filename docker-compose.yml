@@ -8,7 +8,7 @@ services:
     image: chatapprt-backend
     container_name: chatapprt-backend
     volumes:
-      - ./server/:/usr/src/app
+      - ./backend/:/usr/src/app
       - /usr/src/app/node_modules
     ports:
       - "5000:5000"
@@ -35,7 +35,7 @@ services:
     image: chatapprt-frontend
     container_name: chatapprt-frontend
     volumes:
-      - ./client/:/usr/app
+      - ./frontend/:/usr/app
       - /usr/app/node_modules
     depends_on:
       - backend
